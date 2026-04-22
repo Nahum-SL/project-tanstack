@@ -1,14 +1,14 @@
 {
-  "files.watcherExclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "search.exclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "files.readonlyInclude": {
-    "**/routeTree.gen.ts": true
-  },
-  "[javascript]": {
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSave": true, // <--- Agrega esto para que formatee solo al guardar
+  "editor.defaultFormatter": "biomejs.biome", // <--- Define Biome como global del proyecto
+  
+  "files.watcherExclude": { "**/routeTree.gen.ts": true },
+  "search.exclude": { "**/routeTree.gen.ts": true },
+  "files.readonlyInclude": { "**/routeTree.gen.ts": true },
+
+// Estas secciones son las que quitan el cartel de error
+  "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascriptreact]": {
@@ -17,19 +17,16 @@
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[typescriptreact]": {
+  "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[json]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
+
+  "[json]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[jsonc]": { "editor.defaultFormatter": "biomejs.biome" },
+  "[css]": { "editor.defaultFormatter": "biomejs.biome" },
+
   "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit", // <--- Sugerencia: arregla lints automáticamente
     "source.organizeImports.biome": "explicit"
   }
 }
